@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1F2A44">
+  <title>LUMINA | Iluminación de diseño</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" data-page="home">LUMINA<span>●</span><small>ILUMINACIÓN DE DISEÑO</small></a>
+  <nav class="desktop-nav">
+    <a href="#" data-page="home" class="active">Inicio</a><a href="#" data-page="catalog">Catálogo</a>
+    <a href="#" data-page="catalog" data-filter="Colección">Colecciones</a><a href="#" data-page="catalog" data-filter="Oferta">Ofertas</a><a href="#" data-page="help">Contacto</a>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" title="Buscar" data-page="search">⌕</button>
+    <button class="icon-btn" title="Favoritos" data-page="favorites">♡</button>
+    <button class="icon-btn cart-shortcut" title="Carrito" data-page="cart">▢ <b id="cartCount">0</b></button>
+    <button class="icon-btn" title="Cuenta" data-page="account">♙</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </div>
+</header>
+
+<main id="app">
+  <section class="hero">
+    <div class="hero-copy"><span class="eyebrow">NUEVA COLECCIÓN 2026</span>
+      <h1>La luz que convierte<br>tu casa en hogar.</h1>
+      <p>Lámparas de diseño con luz cálida, hechas para durar. Envíos a todo el Perú y 2 años de garantía.</p>
+      <div class="hero-buttons"><button class="btn primary" data-page="catalog">Ver catálogo</button><button class="btn outline" data-page="help">Cómo elegir tu luz</button></div>
+    </div>
+    <div class="hero-art"><div class="lamp-glow"></div><div class="hero-lamp"><div class="shade"></div><div class="stem"></div><div class="base"></div></div><div class="hero-caption">COLECCIÓN · LUZ CÁLIDA</div></div>
+  </section>
+  <section class="benefits">
+    <article><span>♧</span><div><b>Envío gratis</b><small>Desde S/ 199</small></div></article>
+    <article><span>☼</span><div><b>Luz cálida</b><small>2700 K a 3000 K</small></div></article>
+    <article><span>✓</span><div><b>2 años de garantía</b><small>Cambio sin costo</small></div></article>
+  </section>
+  <section class="section">
+    <div class="section-heading"><div><span class="eyebrow">ENCUENTRA TU ESTILO</span><h2>Compra por categoría</h2></div><a href="#" data-page="catalog">Ver todo →</a></div>
+    <div class="category-grid">
+      <button class="category-card cat-one" data-category="De mesa"><span>01</span><b>De mesa</b></button>
+      <button class="category-card cat-two" data-category="Colgante"><span>02</span><b>Colgantes</b></button>
+      <button class="category-card cat-three" data-category="De pie"><span>03</span><b>De pie</b></button>
+      <button class="category-card cat-four" data-category="Aplique"><span>04</span><b>Apliques</b></button>
+    </div>
+  </section>
+  <section class="section soft-section"><div class="section-heading"><div><span class="eyebrow">SELECCIÓN LUMINA</span><h2>Los más vendidos</h2></div><a href="#" data-page="catalog">Ver catálogo →</a></div><div id="homeProducts" class="product-grid"></div></section>
+</main>
+
+<footer class="footer">
+  <div class="footer-brand"><a class="brand light" href="#" data-page="home">LUMINA<span>●</span></a><p>Iluminación de diseño para hogares y negocios.<br>Hecho con cariño en el Perú.</p></div>
+  <div><b>Tienda</b><a href="#" data-page="catalog">Lámparas de mesa</a><a href="#" data-page="catalog">Colgantes</a><a href="#" data-page="catalog">Lámparas de pie</a></div>
+  <div><b>Ayuda</b><a href="#" data-page="help">Envíos</a><a href="#" data-page="help">Garantía</a><a href="#" data-page="help">Contacto</a></div>
+  <div><b>Empresa</b><a href="#" data-page="help">Nosotros</a><a href="#" data-page="help">Preguntas frecuentes</a><a href="#" data-page="account">Mi cuenta</a></div>
+  <small class="copyright">© 2026 LUMINA S.A.C. Todos los derechos reservados.</small>
+</footer>
+<div id="toast" class="toast" role="status"></div>
+<div id="modalRoot"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="app.js"></script>
+<script src="supabase-integration.js"></script>
+</body></html>
